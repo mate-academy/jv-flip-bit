@@ -11,21 +11,6 @@ public class FlipBit {
      * </p>
      */
     public int flipBit(int value, int bitIndex) {
-        StringBuilder binaryString = new StringBuilder(Integer.toBinaryString(value));
-        if (binaryString.length() < bitIndex) {
-            StringBuilder result = new StringBuilder();
-            result.append('1');
-            for (int i = 1; i < bitIndex - binaryString.length(); i++) {
-                result.append('0');
-            }
-            return Integer.parseInt(result.append(binaryString).toString(), 2);
-        }
-        int bit = binaryString.length() - bitIndex;
-        if (binaryString.charAt(bit) == '0') {
-            binaryString.replace(bit, bit + 1, "1");
-        } else {
-            binaryString.replace(bit, bit + 1, "0");
-        }
-        return Integer.parseInt(binaryString.toString(), 2);
+        return value ^ (int) Math.pow(2, bitIndex - 1);
     }
 }
