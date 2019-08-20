@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.util.Arrays;
+
 public class FlipBit {
 
     /**
@@ -7,9 +9,9 @@ public class FlipBit {
      * заданного целого числа на противоположное.
      * Данная задача актуальна, например, при работе с битовыми полями.
      *
-     * Договоримся, что биты нумеруются от младшего (индекс 1) к старшему (индекс 32).
+     * <p>Договоримся, что биты нумеруются от младшего (индекс 1) к старшему (индекс 32).
      */
     public int flipBit(int value, int bitIndex) {
-        return 0;
+        return value ^ (1 << bitIndex - 1);
     }
 }
