@@ -10,6 +10,10 @@ public class FlipBit {
      * Договоримся, что биты нумеруются от младшего (индекс 1) к старшему (индекс 32).
      */
     public int flipBit(int value, int bitIndex) {
-        return 0;
+        if (bitIndex < 1 || bitIndex > 32) {
+            System.out.println("Not valid bitIndex");
+            return 0;
+        }
+        return value ^ 1 << bitIndex;
     }
 }
