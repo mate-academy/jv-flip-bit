@@ -14,6 +14,6 @@ public class FlipBit {
             System.out.println("Not valid bitIndex");
             return 0;
         }
-        return value ^ (1 << bitIndex);
+        return value ^ (1 << bitIndex - 1);
     }
 }
