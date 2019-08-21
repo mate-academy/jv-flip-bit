@@ -11,13 +11,10 @@ public class FlipBit {
      * Договоримся, что биты нумеруются от младшего (индекс 1) к старшему (индекс 32).
      */
     public int flipBit(int value, int bitIndex) {
-        String stringValue = String.format("%32s", Integer.toBinaryString(value)).replace(' ', '0');
-        StringBuilder stringBuilder = new StringBuilder(stringValue);
-        stringBuilder.reverse();
-        char[] array = stringBuilder.toString().toCharArray();
-        array[bitIndex - 1] = array[bitIndex - 1] == '0' ? '1' : '0';
-        stringBuilder = new StringBuilder(new String(array));
-        String result = stringBuilder.reverse().toString();
-        return Integer.valueOf(result, 2);
+        int forXor = 1;
+        for (int i = 0; i < bitIndex - 1; i++) {
+            forXor = forXor * 2;
+        }
+        return value ^ forXor;
     }
 }
