@@ -9,7 +9,6 @@ public class FlipBit {
      * Договоримся, что биты нумеруются от младшего (индекс 1) к старшему (индекс 32).</p>
      */
     public int flipBit(int value, int bitIndex) {
-        int xor = (int) Math.round(Math.pow(2, bitIndex - 1));
-        return value ^ xor;
+        return value ^ (int) Math.pow(2, bitIndex - 1);
     }
 }
