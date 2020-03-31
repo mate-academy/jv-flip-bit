@@ -30,8 +30,4 @@ public class FlipBit {
         }
         return Integer.parseInt(res, 2);
     }
-
-    public static void main(String[] args) {
-        System.out.println(flipBit(10,1));
-    }
 }
