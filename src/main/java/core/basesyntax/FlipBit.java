@@ -10,6 +10,6 @@ public class FlipBit {
      */
     public int flipBit(int value, int bitIndex) {
         int nev = 1 << (bitIndex - 1);
-        return value^nev;
+        return value ^ nev;
     }
 }
