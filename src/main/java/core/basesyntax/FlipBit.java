@@ -9,7 +9,6 @@ public class FlipBit {
      * Договоримся, что биты нумеруются от младшего (индекс 1) к старшему (индекс 32).</p>
      */
     public int flipBit(int value, int bitIndex) {
-        int mask = 1 << bitIndex - 1;
-        return (value & mask) != 0 ? value & (~ mask) : value | mask;
+        return value ^ 1 << bitIndex - 1;
     }
 }
