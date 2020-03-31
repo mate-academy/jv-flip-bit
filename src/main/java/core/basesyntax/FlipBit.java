@@ -10,11 +10,9 @@ public class FlipBit {
      */
     public int flipBit(int value, int bitIndex) {
         if (bitIndex == 1) {
-            int mask = 1;
-            return value ^ mask;
+            return value ^ 1;
         } else {
-            int mask = 1 << bitIndex - 1;
-            return value ^ mask;
+            return value ^ (1 << bitIndex - 1);
         }
     }
 }
